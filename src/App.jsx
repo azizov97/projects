@@ -1,11 +1,11 @@
 import { Component } from "react";
-import Tasbih from "./components/tasbih";
+import Calculator from "./components/appleCalculator";
 
 class App extends Component {
   render() {
     return (
       <>
-        <Tasbih />
+        <Calculator />
       </>
     );
   }
