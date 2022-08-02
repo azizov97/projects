@@ -25,7 +25,7 @@ const Calculator = () => {
         <div className="row">
           <div className="col-12">
             <h1 className="display-6 fw-bolder text-center text-primary">
-              CALCULATOR APP
+              CALCULATOR +-
             </h1>
             <hr />
           </div>
