@@ -1,11 +1,12 @@
 import { Component } from "react";
-import Tasbih from "./components/tasbih";
+import Calculator from "./components/calculator";
+
 
 class App extends Component {
   render() {
     return (
       <>
-        <Tasbih />
+        <Calculator />
       </>
     );
   }
