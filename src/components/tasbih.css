@@ -4,6 +4,7 @@ body {
   align-items: center;
   background-color: #000;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  user-select: none;
 }
 .wrapper {
   display: flex;
