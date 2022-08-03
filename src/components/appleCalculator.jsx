@@ -1,28 +1,16 @@
 import React, { Component } from "react";
+
 import "./appleCalculator.scss";
 export default class Calculator extends Component {
   state = {
     count: "",
-    total: "",
-    operation: "",
   };
-
-  arr = [];
-
-  handleFunction = (e) => {};
-
   handleCount = (e) => {
-    let val = e.target.innerText;
-    let results = this.arr.join("");
-    this.setState({ count: results });
-    this.arr.push(val);
-    this.setState({ total: this.state.count, count: "" });
+    this.setState({ count: this.state.count.concat(e.target.innerText) });
   };
-
-  handleResult = (e) => {
-    this.setState({ count: eval(this.state.total) });
-    let results = this.arr.join("");
-    console.log(results);
+  handleResult = () => {
+    // eslint-disable-next-line no-eval
+    this.setState({ count: eval(this.state.count) });
   };
   handleReset = () => {
     this.setState({ count: 0 });
@@ -33,11 +21,7 @@ export default class Calculator extends Component {
   handlePercentage = () => {
     this.setState({ count: this.state.count / 100 });
   };
-  handleOperation = (e) => {
-    let a = e.target.innerText;
-    this.arr.push(a);
-    a = "";
-  };
+
   render() {
     return (
       <>
@@ -46,7 +30,6 @@ export default class Calculator extends Component {
             <div className="calculate-display">
               <h1>{this.state.count}</h1>
             </div>
-
             <div className="calculate-controls">
               <div
                 onClick={this.handleReset}
@@ -67,7 +50,7 @@ export default class Calculator extends Component {
                 %
               </div>
               <div
-                onClick={this.handleOperation}
+                onClick={this.handleCount}
                 className="calculate-control color"
               >
                 /
@@ -82,7 +65,7 @@ export default class Calculator extends Component {
                 9
               </div>
               <div
-                onClick={this.handleOperation}
+                onClick={this.handleCount}
                 className="calculate-control color"
               >
                 *
@@ -97,7 +80,7 @@ export default class Calculator extends Component {
                 6
               </div>
               <div
-                onClick={this.handleOperation}
+                onClick={this.handleCount}
                 className="calculate-control color"
               >
                 -
@@ -112,7 +95,7 @@ export default class Calculator extends Component {
                 3
               </div>
               <div
-                onClick={this.handleOperation}
+                onClick={this.handleCount}
                 className="calculate-control color"
               >
                 +
