@@ -1,11 +1,11 @@
 import { Component } from "react";
-import Calculator from "./components/appleCalculator";
+import Tabs from "./components/tabs/tabs";
 
 class App extends Component {
   render() {
     return (
       <>
-        <Calculator />
+        <Tabs />
       </>
     );
   }
